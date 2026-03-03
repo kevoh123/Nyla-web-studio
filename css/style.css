@@ -767,7 +767,7 @@ html {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: var(--space-lg);
     margin-top: var(--space-xl);
 }
@@ -1551,6 +1551,40 @@ html {
     .stat-item {
         flex: 1 1 calc(50% - var(--space-lg));
     }
+
+    /* Services cards smaller padding + icon size */
+    .services-grid {
+        gap: var(--space-md);
+    }
+
+    .service-card {
+        padding: var(--space-lg);
+    }
+
+    .service-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .service-icon i {
+        font-size: 1.4rem;
+    }
+
+    /* Make contact form rows stack on tablets */
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    /* Navigation adjustments for mobile layout */
+    .nav-menu {
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+
+    .nav-list {
+        gap: var(--space-md);
+    }
 }
 
 @media (max-width: 480px) {
@@ -1611,5 +1645,25 @@ html {
     .nav-cta {
         width: 100%;
         justify-content: center;
+    }
+
+    /* Further tighten service card styles on small phones */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+
+    .service-card {
+        padding: var(--space-md);
+    }
+
+    /* Contact grid stacks cleanly and uses full width */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        padding: var(--space-lg);
+    }
+
+    .contact {
+        padding: var(--space-xl) 0;
     }
 }
