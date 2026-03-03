@@ -1360,7 +1360,12 @@ html {
     padding: var(--space-3xl) var(--space-2xl) var(--space-xl);
 }
 
-/* Ensure footer columns have internal padding to prevent crowding */
+/* Ensure footer container and columns have extra padding */
+.footer .container {
+    padding-left: var(--space-2xl);
+    padding-right: var(--space-2xl);
+}
+
 .footer-grid > * {
     padding: 0 var(--space-2xl);
 }
