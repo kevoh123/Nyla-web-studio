@@ -1152,6 +1152,13 @@ html {
     padding: var(--space-2xl);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
+    /* add inner padding to prevent inputs touching edges */
+    padding-right: var(--space-3xl);
+}
+
+/* ensure form itself has breathing room on all screens */
+.contact-form {
+    padding: var(--space-lg) var(--space-xl);
 }
 
 .contact-title {
