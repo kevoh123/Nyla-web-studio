@@ -1349,7 +1349,12 @@ html {
 .footer {
     background: var(--primary-dark);
     color: var(--white);
-    padding: var(--space-3xl) 0 var(--space-xl);
+    padding: var(--space-3xl) var(--space-lg) var(--space-xl);
+}
+
+/* Ensure footer columns have internal padding to prevent crowding */
+.footer-grid > * {
+    padding: 0 var(--space-md);
 }
 
 .footer-grid {
@@ -1509,6 +1514,22 @@ html {
     .hero-cta {
         flex-direction: column;
     }
+
+    /* footer stacks on smaller screens and increases padding */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+    .footer {
+        padding: var(--space-3xl) var(--space-lg) var(--space-xl);
+    }
+    .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-lg);
+    }
+    .footer-column a {
+        font-size: 1rem;
+    }
     
     .work-grid {
         grid-template-columns: 1fr;
@@ -1596,6 +1617,22 @@ html {
 @media (max-width: 480px) {
     .form-row {
         grid-template-columns: 1fr;
+    }
+
+    /* footer full-width column stack and enlarge spacing */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+    .footer {
+        padding: var(--space-3xl) var(--space-lg) var(--space-xl);
+    }
+    .footer-column {
+        margin-bottom: var(--space-lg);
     }
     
     .footer-links {
