@@ -63,6 +63,13 @@ body {
     overflow-x: hidden;
 }
 
+/* Make images responsive by default */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -1558,5 +1565,51 @@ html {
     .footer-bottom {
         flex-direction: column;
         text-align: center;
+    }
+
+    /* Tighter hero spacing and smaller decorative shapes to avoid overflow */
+    .hero {
+        padding: 2rem 1rem;
+        min-height: auto;
+    }
+
+    .hero-shape-1 {
+        width: 200px;
+        height: 200px;
+        top: -60px;
+        right: -60px;
+        filter: blur(40px);
+    }
+
+    .hero-shape-2 {
+        width: 160px;
+        height: 160px;
+        bottom: -60px;
+        left: -60px;
+        filter: blur(40px);
+    }
+
+    .hero-shape-3 {
+        width: 120px;
+        height: 120px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Make CTA buttons stack and fit mobile */
+    .hero-cta a {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Ensure nav CTA and menu fit */
+    .nav-menu {
+        padding: 1.5rem;
+    }
+
+    .nav-cta {
+        width: 100%;
+        justify-content: center;
     }
 }
