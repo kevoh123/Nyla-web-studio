@@ -1349,13 +1349,13 @@ html {
 .footer {
     background: var(--primary-dark);
     color: var(--white);
-    /* equalized horizontal padding on both sides, increased for balance */
-    padding: var(--space-3xl) var(--space-xl) var(--space-xl);
+    /* more generous horizontal padding for breathing room */
+    padding: var(--space-3xl) var(--space-2xl) var(--space-xl);
 }
 
 /* Ensure footer columns have internal padding to prevent crowding */
 .footer-grid > * {
-    padding: 0 var(--space-xl);
+    padding: 0 var(--space-2xl);
 }
 
 .footer-grid {
