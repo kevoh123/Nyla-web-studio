@@ -55,12 +55,26 @@
    Base Styles
    ========================================================================== */
 
+html,
+body {
+    overflow-x: hidden; /* prevent horizontal scroll */
+}
+
 body {
     font-family: var(--font-primary);
     color: var(--gray-800);
     background: var(--white);
     line-height: 1.6;
-    overflow-x: hidden;
+}
+
+/* extra guard: force main wrapper not to grow beyond viewport */
+.container,
+.hero,
+.work-grid,
+.services-grid,
+.footer,
+.contact-grid {
+    max-width: 100vw;
 }
 
 /* Make images responsive by default */
