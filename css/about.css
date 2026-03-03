@@ -1,0 +1,406 @@
+/* ========================================
+   ABOUT PAGE STYLES - Nyla Web Studio
+   These styles work with variables from styles.css
+   ======================================== */
+
+/*-----------------------------------------
+  1. PAGE HEADER
+-----------------------------------------*/
+.page-header {
+    background: linear-gradient(135deg, var(--primary-beige) 0%, #fff 100%);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 48px;
+    color: var(--primary-teal);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.page-header p {
+    font-size: 20px;
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/*-----------------------------------------
+  2. STORY SECTION
+-----------------------------------------*/
+.story-section {
+    padding: 100px 0;
+    background-color: var(--white);
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.story-content h2 {
+    font-size: 36px;
+    color: var(--primary-teal);
+    margin-bottom: 25px;
+}
+
+.story-content p {
+    margin-bottom: 20px;
+    color: var(--text-light);
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.story-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 42px;
+    font-weight: 600;
+    color: var(--primary-teal);
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    color: var(--text-light);
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.story-image {
+    background-color: var(--primary-beige);
+    height: 500px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+}
+
+.story-image svg {
+    width: 80%;
+    height: auto;
+}
+
+/*-----------------------------------------
+  3. VALUES SECTION
+-----------------------------------------*/
+.values-section {
+    padding: 100px 0;
+    background-color: var(--primary-beige);
+}
+
+.values-section h2 {
+    font-size: 36px;
+    color: var(--primary-teal);
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.value-card {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(44, 74, 74, 0.1);
+}
+
+.value-icon {
+    width: 70px;
+    height: 70px;
+    background-color: var(--primary-teal);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.value-card h3 {
+    font-size: 24px;
+    color: var(--primary-teal);
+    margin-bottom: 15px;
+}
+
+.value-card p {
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+/*-----------------------------------------
+  4. TEAM SECTION
+-----------------------------------------*/
+.team-section {
+    padding: 100px 0;
+    background-color: var(--white);
+}
+
+.team-section h2 {
+    font-size: 36px;
+    color: var(--primary-teal);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.team-subtitle {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 60px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.member-image {
+    width: 200px;
+    height: 200px;
+    background-color: var(--primary-beige);
+    border-radius: 50%;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.member-image:hover {
+    transform: scale(1.05);
+}
+
+.member-image svg {
+    width: 60%;
+    height: auto;
+}
+
+.team-member h3 {
+    font-size: 24px;
+    color: var(--primary-teal);
+    margin-bottom: 5px;
+}
+
+.member-role {
+    color: var(--text-light);
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.member-bio {
+    color: var(--text-light);
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+/*-----------------------------------------
+  5. PROCESS SECTION
+-----------------------------------------*/
+.process-section {
+    padding: 100px 0;
+    background-color: var(--primary-beige);
+}
+
+.process-section h2 {
+    font-size: 36px;
+    color: var(--primary-teal);
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.process-timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.process-timeline::before {
+    content: '';
+    position: absolute;
+    left: 50px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--primary-teal);
+    opacity: 0.2;
+}
+
+.process-item {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.process-number {
+    width: 100px;
+    height: 100px;
+    background-color: var(--white);
+    border: 2px solid var(--primary-teal);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--primary-teal);
+    position: relative;
+    z-index: 1;
+    background-color: var(--primary-beige);
+    flex-shrink: 0;
+}
+
+.process-content {
+    flex: 1;
+    padding-top: 20px;
+}
+
+.process-content h3 {
+    font-size: 24px;
+    color: var(--primary-teal);
+    margin-bottom: 10px;
+}
+
+.process-content p {
+    color: var(--text-light);
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/*-----------------------------------------
+  6. RESPONSIVE DESIGN
+-----------------------------------------*/
+@media (max-width: 992px) {
+    .story-grid,
+    .values-grid,
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-timeline::before {
+        left: 40px;
+    }
+
+    .process-number {
+        width: 80px;
+        height: 80px;
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        padding: 60px 0;
+    }
+
+    .page-header h1 {
+        font-size: 36px;
+    }
+
+    .page-header p {
+        font-size: 18px;
+    }
+
+    .story-section,
+    .values-section,
+    .team-section,
+    .process-section {
+        padding: 60px 0;
+    }
+
+    .story-grid,
+    .values-grid,
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .story-content h2,
+    .values-section h2,
+    .team-section h2,
+    .process-section h2 {
+        font-size: 30px;
+    }
+
+    .story-image {
+        height: 350px;
+        order: -1;
+    }
+
+    .story-stats {
+        gap: 20px;
+    }
+
+    .stat-number {
+        font-size: 32px;
+    }
+
+    .process-item {
+        gap: 20px;
+    }
+
+    .process-number {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+
+    .process-timeline::before {
+        left: 30px;
+    }
+
+    .process-content h3 {
+        font-size: 20px;
+    }
+
+    .process-content p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .story-stats {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .member-image {
+        width: 150px;
+        height: 150px;
+    }
+}
