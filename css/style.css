@@ -1555,10 +1555,16 @@ html {
     /* Services cards smaller padding + icon size */
     .services-grid {
         gap: var(--space-md);
+        /* Force single column on tablet widths to avoid overlap */
+        grid-template-columns: 1fr;
+        align-items: start;
     }
 
     .service-card {
         padding: var(--space-lg);
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0;
     }
 
     .service-icon {
