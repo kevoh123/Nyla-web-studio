@@ -4,30 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Work - Nyla Web Studio</title>
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts - Professional Pairing -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/work.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="work.html" class="active">Work</a>
-            <a href="services.html">Services</a>
-            <a href="about.html">About</a>
-            <a href="insights.html">Insights</a>
-        </nav>
-    </header>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-text">NYLA</span>
+                <span class="logo-tagline">web studio</span>
+            </a>
+            <div class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="work.html" class="nav-link active">Work</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="insights.html" class="nav-link">Insights</a></li>
+                </ul>
+                <a href="index.html#contact" class="nav-cta">
+                    <span>Start Project</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
     <main>
         <section class="portfolio">
-            <h1>Our Work</h1>
-            <p>Explore our latest projects and case studies.</p>
-            <!-- Add your work content here -->
+            <div class="container">
+                <h1>Our Work</h1>
+                <p>Explore our latest projects and case studies.</p>
+                <!-- Add your work content here -->
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Nyla Web Studio. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <a href="index.html" class="footer-logo">NYLA WEB STUDIO</a>
+                    <p>Creating websites that work as hard as you do. Based in San Francisco, serving clients worldwide.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="work.html">Work</a></li>
+                        <li><a href="services.html">Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#web-design">Web Design</a></li>
+                        <li><a href="#development">Development</a></li>
+                        <li><a href="#seo">SEO</a></li>
+                        <li><a href="#maintenance">Maintenance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Get in Touch</h4>
+                    <p>📧 hello@nylawebstudio.com</p>
+                    <p>📱 (555) 123-4567</p>
+                    <p>📍 San Francisco, CA</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Nyla Web Studio. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
     <script src="js/main.js"></script>
