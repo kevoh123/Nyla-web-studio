@@ -399,6 +399,48 @@
         gap: 30px;
     }
 
+
+/* --------------------------------------------------------------------------
+   Enforce site typography & accents for About page elements
+   -------------------------------------------------------------------------- */
+.page-header h1,
+.story-content h2,
+.values-section h2,
+.team-section h2,
+.process-section h2,
+.process-content h3,
+.value-card h3,
+.team-member h3 {
+    font-family: var(--font-display);
+    color: var(--primary);
+    line-height: 1.2;
+}
+
+.story-content p,
+.value-card p,
+.member-bio,
+.process-content p {
+    font-family: var(--font-primary);
+    color: var(--gray-600);
+}
+
+/* Accent icons and stat numbers */
+.value-icon {
+    background-color: var(--secondary);
+    color: var(--primary);
+    font-family: var(--font-primary);
+}
+
+.stat-number {
+    color: var(--secondary);
+    font-family: var(--font-display);
+}
+
+/* Ensure specificity so global rules don't override these styles */
+.page-header h1,
+.story-content h2,
+.value-card h3 { color: var(--primary) !important; }
+
     .member-image {
         width: 150px;
         height: 150px;
