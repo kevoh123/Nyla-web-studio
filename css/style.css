@@ -181,6 +181,7 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .nav-logo {
@@ -272,6 +273,10 @@ html {
     flex-direction: column;
     gap: 6px;
     cursor: pointer;
+    position: relative;
+    z-index: 1001;
+    margin-left: auto;
+    order: 3;
 }
 
 .nav-toggle span {
@@ -286,28 +291,41 @@ html {
     .nav-menu {
         position: fixed;
         top: 72px;
-        left: 0;
+        right: 0;
         width: 100%;
         background: var(--white);
         flex-direction: column;
         padding: var(--space-xl);
         gap: var(--space-lg);
-        transform: translateY(-150%);
+        transform: translateX(100%);
         opacity: 0;
         transition: var(--transition);
         box-shadow: var(--shadow-lg);
         border-bottom: 1px solid var(--gray-200);
+        max-height: calc(100vh - 72px);
+        overflow-y: auto;
     }
     
     .nav-menu.active {
-        transform: translateY(0);
+        transform: translateX(0);
         opacity: 1;
     }
     
     .nav-list {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         gap: var(--space-md);
+        width: 100%;
+    }
+    
+    .nav-list li {
+        width: 100%;
+    }
+    
+    .nav-list .nav-link {
+        display: block;
+        padding: var(--space-sm) 0;
+        width: 100%;
     }
     
     .nav-toggle {
@@ -337,6 +355,7 @@ html {
     align-items: center;
     position: relative;
     padding: var(--space-3xl) var(--space-lg);
+    padding-top: 150px;
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
     color: var(--white);
     overflow: hidden;
@@ -391,11 +410,13 @@ html {
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: 90%;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
     position: relative;
     z-index: 10;
+    padding: 0 var(--space-md);
 }
 
 .hero-badge {
@@ -421,10 +442,12 @@ html {
 
 .hero-title {
     font-family: var(--font-display);
-    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-size: clamp(2rem, 8vw, 5rem);
     line-height: 1.1;
     margin-bottom: var(--space-md);
     font-weight: 800;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .title-line {
@@ -528,13 +551,16 @@ html {
 .hero-stats {
     display: flex;
     justify-content: center;
-    gap: var(--space-2xl);
+    gap: var(--space-lg);
     animation: fadeUp 1s ease 1.2s forwards;
     opacity: 0;
+    flex-wrap: wrap;
 }
 
 .stat-item {
     text-align: center;
+    flex: 0 1 auto;
+    min-width: 130px;
 }
 
 .stat-number {
@@ -1636,12 +1662,91 @@ html {
     }
 }
 
+@media (max-width: 640px) {
+    /* Hero section mobile optimization */
+    .hero {
+        padding: 1.5rem 1rem;
+        padding-top: 120px;
+        min-height: auto;
+    }
+
+    .hero-shape-1 {
+        width: 150px;
+        height: 150px;
+        top: -50px;
+        right: -50px;
+        filter: blur(30px);
+    }
+
+    .hero-shape-2 {
+        width: 120px;
+        height: 120px;
+        bottom: -50px;
+        left: -50px;
+        filter: blur(30px);
+    }
+
+    .hero-shape-3 {
+        width: 100px;
+        height: 100px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        filter: blur(30px);
+    }
+
+    .hero-title {
+        font-size: clamp(1.75rem, 6vw, 3rem);
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        margin: 0 auto var(--space-lg);
+    }
+
+    .hero-cta {
+        flex-direction: column;  
+        gap: var(--space-md);
+    }
+
+    .hero-cta a {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-stats {
+        gap: var(--space-md);
+        padding: 0 var(--space-sm);
+    }
+
+    .stat-item {
+        flex: 0 1 calc(50% - var(--space-sm));
+        min-width: 100px;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+    }
+
+    .hero-scroll {
+        display: none;
+    }
+
+    .trusted-logos {
+        gap: var(--space-md);
+    }
+}
+
 @media (max-width: 480px) {
     .form-row {
         grid-template-columns: 1fr;
     }
 
-    /* footer full-width column stack and enlarge spacing */
+    /* footer full-width column stack */
     .footer-grid {
         grid-template-columns: 1fr;
         gap: var(--space-xl);
@@ -1657,59 +1762,32 @@ html {
         margin-bottom: var(--space-lg);
     }
     
-    .footer-links {
-        grid-template-columns: 1fr;
-    }
-    
     .footer-bottom {
         flex-direction: column;
         text-align: center;
     }
 
-    /* Tighter hero spacing and smaller decorative shapes to avoid overflow */
-    .hero {
-        padding: 2rem 1rem;
-        min-height: auto;
+    /* Navigation on small screens */
+    .nav-container {
+        padding: var(--space-sm) var(--space-md);
+    }
+    
+    .logo-text {
+        font-size: 1.25rem;
+    }
+    
+    .logo-tagline {
+        font-size: 0.65rem;
     }
 
-    .hero-shape-1 {
-        width: 200px;
-        height: 200px;
-        top: -60px;
-        right: -60px;
-        filter: blur(40px);
-    }
-
-    .hero-shape-2 {
-        width: 160px;
-        height: 160px;
-        bottom: -60px;
-        left: -60px;
-        filter: blur(40px);
-    }
-
-    .hero-shape-3 {
-        width: 120px;
-        height: 120px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    /* Make CTA buttons stack and fit mobile */
-    .hero-cta a {
-        width: 100%;
-        justify-content: center;
-    }
-
-    /* Ensure nav CTA and menu fit */
     .nav-menu {
-        padding: 1.5rem;
+        padding: var(--space-lg) var(--space-md);
     }
 
     .nav-cta {
         width: 100%;
         justify-content: center;
+        font-size: 0.9rem;
     }
 
     /* Further tighten service card styles on small phones */
@@ -1722,7 +1800,7 @@ html {
         padding: var(--space-md);
     }
 
-    /* Contact grid stacks cleanly and uses full width */
+    /* Contact grid stacks cleanly */
     .contact-grid {
         grid-template-columns: 1fr;
         padding: var(--space-lg);

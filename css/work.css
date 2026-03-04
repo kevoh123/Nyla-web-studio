@@ -19,3 +19,35 @@
 }
 
 /* Add portfolio grid or additional styles here */
+
+@media (max-width: 768px) {
+    .portfolio {
+        padding: 40px 15px;
+    }
+
+    .portfolio h1 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .portfolio p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio {
+        padding: 30px 10px;
+    }
+
+    .portfolio h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .portfolio p {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+}

@@ -19,3 +19,35 @@
 }
 
 /* Add blog posts, articles, or additional styles here */
+
+@media (max-width: 768px) {
+    .insights {
+        padding: 40px 15px;
+    }
+
+    .insights h1 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .insights p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .insights {
+        padding: 30px 10px;
+    }
+
+    .insights h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .insights p {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+}
